@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án Môi trường - Vì một Trái Đất Xanh</title>
+    <style>
+        /* CSS Reset & Cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        /* Thanh điều hướng */
+        nav {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d8f3dc;
+        }
+
+        /* Phần Hero (Giới thiệu đầu trang) */
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Các Section chung */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2.section-title {
+            text-align: center;
+            color: #1b4332;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: #52b788;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Bố cục nội dung */
+        .content-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2d6a4f;
+            margin-bottom: 15px;
+        }
+
+        /* Phần Giải pháp */
+        #giai-phap {
+            background-color: #d8f3dc;
+        }
+
+        /* Chân trang */
+        footer {
+            background: #1b4332;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .footer-info {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #b7e4c7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☘️ GreenFuture</div>
+        <ul>
+            <li><a href="#thuc-trang">Thực trạng</a></li>
+            <li><a href="#nguyen-nhan">Nguyên nhân</a></li>
+            <li><a href="#giai-phap">Giải pháp</a></li>
+            <li><a href="#thong-tin">Thông tin</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>BẢO VỆ MÔI TRƯỜNG LÀ BẢO VỆ CHÍNH MÌNH</h1>
+        <p>Hành động nhỏ, thay đổi lớn cho tương lai của chúng ta.</p>
+    </header>
+
+    <section id="thuc-trang">
+        <h2 class="section-title">Thực trạng hiện nay</h2>
+        <div class="content-box">
+            <div class="card">
+                <h3>Biến đổi khí hậu</h3>
+                <p>Nhiệt độ toàn cầu đang tăng lên nhanh chóng, làm tan băng ở hai cực và gây ra các hiện tượng thời tiết cực đoan như bão lũ, hạn hán kéo dài.</p>
+            </div>
+            <div class="card">
+                <h3>Ô nhiễm rác thải nhựa</h3>
+                <p>Mỗi năm có hàng triệu tấn nhựa thải ra đại dương, đe dọa trực tiếp đến đời sống sinh vật biển và sức khỏe con người qua chuỗi thức ăn.</p>
+            </div>
+            <div class="card">
+                <h3>Suy giảm đa dạng sinh học</h3>
+                <p>Nhiều loài động thực vật quý hiếm đang đứng trước nguy cơ tuyệt chủng do mất đi môi trường sống tự nhiên bởi bàn tay con người.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nguyen-nhan">
+        <h2 class="section-title">Nguyên nhân chính</h2>
+        <div class="content-box">
+            <div class="card">
+                <h3>Công nghiệp hóa</h3>
+                <p>Khí thải từ các nhà máy và quá trình đốt nhiên liệu hóa thạch là nguồn phát thải khí nhà kính lớn nhất hiện nay.</p>
+            </div>
+            <div class="card">
+                <h3>Ý thức cộng đồng</h3>
+                <p>Thói quen sử dụng đồ nhựa dùng một lần và xả rác bừa bãi vẫn còn phổ biến trong đời sống hàng ngày của người dân.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="giai-phap">
+        <h2 class="section-title">Hành động của chúng ta</h2>
+        <div class="content-box">
+            <div class="card">
+                <h3>Quy tắc 3R</h3>
+                <p>Reduce (Giảm thiểu) - Reuse (Tái sử dụng) - Recycle (Tái chế). Đây là chìa khóa để giảm áp lực lên bãi rác thải toàn cầu.</p>
+            </div>
+            <div class="card">
+                <h3>Năng lượng sạch</h3>
+                <p>Khuyến khích sử dụng năng lượng mặt trời, năng lượng gió để thay thế cho than đá và dầu mỏ.</p>
+            </div>
+            <div class="card">
+                <h3>Giáo dục & Tuyên truyền</h3>
+                <p>Nâng cao nhận thức cho thế hệ trẻ - những người chủ tương lai của hành tinh về tầm quan trọng của hệ sinh thái.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="thong-tin">
+        <h3>DỰ ÁN HỌC TẬP - LỚP 12</h3>
+        <p>Thực hiện bởi: Nguyễn Văn A</p>
+        <p>Trường THPT X</p>
+        <div class="footer-info">
+            &copy; 2026 Trang web mang tính chất giáo dục bảo vệ môi trường.
+        </div>
+    </footer>
+
+</body>
+</html>
